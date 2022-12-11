@@ -1,0 +1,192 @@
+:root {
+    --dark-gray: #333940;
+    --fuscia: #e867ed;
+    --white: white;
+    --teal: #2eebc8;
+}
+
+::selection {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body {
+    background-color: var(--dark-gray);
+    font-family: "Gill Sans", sans-serif;
+    line-height: 1;
+    font-size: 15px;
+}
+
+h1, h2, h3 {
+    color: var(--fuscia);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.subheader{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+p {
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: var(--fuscia);
+}
+
+.centered {
+    justify-content: center;
+}
+
+/*to line the boxes up 3x3 on full screen, classify the entire section & use this code*/
+.centered {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* starting here, written to format to handheld devices */
+
+.full-box{
+    flex: 100%;
+    padding: 15px;
+    transition: flex 500ms linear;
+    margin-bottom: 25px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--fuscia);
+    outline: 2px dashed var(--white);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+    }
+
+.full-box .section-header{
+    position: relative;
+    margin: -10px;
+    padding: 5px 10px;
+    background-color: var(--dark-gray);
+    border: 2px solid var(--fuscia);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.boxes .section-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-gray);
+    color: var(--fuscia);
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.boxes:hover,
+.boxes:hover .section-header {
+    box-shadow: inset 0px 0px 8px var(--fuscia), 0 0 15px var(--fuscia);
+}
+
+.code-box {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: repeat(12,1fr);
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%);
+}
+
+.code-box pre {
+    /* set styles to make it so code wraps in <pre> instead of overflowing */
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 12px 10px;
+    color: var(--gin);
+    border-radius: 8px;
+    /* use linear-gradient() function to create a fading background  */
+    background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+.boxes .code-box {
+    flex-grow: 1;
+}
+
+.boxes pre:active {
+    user-select: all;
+}
+.section-header {
+    position: relative;
+    margin-top: -20px;
+}
+
+.footer {
+    margin: 40px;
+    text-align: center;
+    color: var(--white);
+  }
+
+/*handheld rendering*/ 
+@media screen and (min-width: 768px) {
+    .full-box {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .full-box:last-child {
+        flex-grow: 1;
+    }
+}  
+
+/*computer rendering*/ 
+@media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+
+    .full-box {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <title>CSS Snippet Cheat Sheet</title>
+    <link rel="stylesheet" href="assets\reset.css" />
+    <link rel="stylesheet" href="assets\style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="title">CSS Snippet Cheat Sheet</h1>
+        <p class="subheader">Random log of favorite CSS syntaxes :)
+            Select any snippet below and it'll automatically select all of the code for you to copy.
+        </p>
+    </header>
+
+    <main>
+        <section class="centered">
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">Flexbox Row</h2>
+                    <div class="box-content">
+                        <p>Use these three properties to create a Flexbox row layout.</p>
+                    </div>
+
+<!--"pre" tag defines block of preformatted text-->
+                    <pre class="code-box">
+                        <code>.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }</code>
+                </pre>
+                </figure>
+            </div>
+
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">Flexbox Column</h2>
+                    <div class="box-content">
+                        <p>Use this to create a flexbox column layout.</p>
+                    </div>
+                    <pre class="code-box">
+                        <code>.column {
+    display: flex;
+    flex-direction: column
+}</code>
+                    </pre>
+                </figure>
+            </div>
+
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">CSS Grid Layout</h2>
+                    <div class="box-content">
+                        <p>Build a 12-column layout using CSS Grid</p>
+                    </div>
+                    <pre class="code-box">
+                        <code>.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+}</code>
+                    </pre>
+                </figure>
+            </div>
+
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">Linear Gradients</h2>
+                    <div class="box-content">
+                        <p>This will create a background linear gradient from top to bottom.</p>
+                    </div>
+                    <pre class="code-box">
+                        <code>.linear-gradient-background {
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%);
+}</code>
+                    </pre>
+                </figure>
+            </div>
+
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">Box Transition Glow</h2>
+                    <div class="box-content">
+                        <p>Use transition and box shadows to glow on hover.</p>
+                    </div>
+                    <pre class="code-box">
+                        <code>.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+    .code-card:hover,
+    .code-card:hover .card-header {
+        box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+    }
+}</code>
+                    </pre>
+                </figure>
+            </div>
+
+            <div class="full-box">
+                <figure class="boxes">
+                    <h2 class="section-header">Overlay Card with Title</h2>
+                    <div class="box-content">
+                        <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+                    </div>
+                    <pre class="code-box">
+                        <code>.card-header {
+    position: relative;
+    margin-top: -20px;
+}</code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+
+</body>
+
+<footer>
+    <h3 class="footer">Made with ❤️ and CSS</h3>
+</footer>
+
+</html>
